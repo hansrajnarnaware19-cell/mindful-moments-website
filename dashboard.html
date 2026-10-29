@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Dashboard | Mindful Moments</title><link rel="stylesheet" href="style.css"><script src="script.js" defer></script></head>
+<body>
+<header class="site-header"><a class="brand" href="index.html"><span class="brand-mark">✿</span> Mindful Moments</a><button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button><nav class="nav-links" aria-label="Main navigation"><a href="index.html">Home</a><a href="about.html">About</a><a href="resources.html">Resources</a><a class="active" href="dashboard.html">Dashboard</a></nav></header>
+<main>
+<section class="dashboard-intro container"><div><span class="eyebrow">Your personal space</span><h1>How are you feeling <em>today?</em></h1><p class="lead">There is no right or wrong answer. This is just a moment to check in.</p></div><div class="date-pill" id="today-date">Your daily check-in</div></section>
+<section class="container dashboard-grid">
+<article class="panel mood-panel"><div class="panel-heading"><div><span class="eyebrow">Mood tracker</span><h2>What best describes your mood?</h2></div><span class="panel-number">01</span></div>
+<form id="mood-form"><div class="mood-options" role="group" aria-label="Choose your mood">
+<button type="button" class="mood-choice" data-mood="Great" aria-pressed="false"><span>😊</span><small>Great</small></button>
+<button type="button" class="mood-choice" data-mood="Good" aria-pressed="false"><span>🙂</span><small>Good</small></button>
+<button type="button" class="mood-choice" data-mood="Okay" aria-pressed="false"><span>😐</span><small>Okay</small></button>
+<button type="button" class="mood-choice" data-mood="Low" aria-pressed="false"><span>😔</span><small>Low</small></button>
+<button type="button" class="mood-choice" data-mood="Stressed" aria-pressed="false"><span>😣</span><small>Stressed</small></button>
+</div><label class="field-label" for="mood-note">Add a note (optional)</label><textarea id="mood-note" rows="3" maxlength="500" placeholder="What might be affecting how you feel? Write only what you're comfortable saving."></textarea><button class="button button-primary full-button" type="submit">Save mood check-in</button><p class="form-message" id="mood-message" aria-live="polite"></p></form>
+<div class="history-heading"><h3>Recent check-ins</h3><button type="button" class="text-button" id="clear-moods">Clear history</button></div><div id="mood-history" class="mood-history"><p class="empty-state">Your saved check-ins will appear here.</p></div>
+<p class="privacy-note">Your entries are saved in this browser on this device. This demo does not send them to a server. Avoid saving highly sensitive details on a shared device.</p>
+</article>
+
+<article class="panel breathing-panel" id="breathing"><div class="panel-heading"><div><span class="eyebrow">Breathing exercise</span><h2>A moment to slow down</h2></div><span class="panel-number">02</span></div><p class="panel-description">Follow the circle and breathe comfortably. No need to force or hold your breath.</p>
+<div class="breath-stage"><div class="breath-orbit"></div><div class="breath-circle" id="breath-circle"><span id="breath-phase">Ready?</span><small id="breath-count">At your own pace</small></div></div>
+<p class="breath-instruction" id="breath-instruction" aria-live="polite">Sit comfortably and begin when you're ready.</p>
+<div class="breath-controls"><button class="button button-primary" id="breath-start" type="button">Start exercise</button><button class="button button-secondary" id="breath-stop" type="button" disabled>Stop</button></div>
+<div class="breath-pattern"><span>Suggested gentle rhythm</span><strong>Inhale 4 sec · Exhale 6 sec</strong><small>Keep breathing naturally. Skip pauses/holds. Stop if uncomfortable.</small></div>
+</article>
+</section>
+<section class="container dashboard-bottom"><div class="mini-stat"><span class="stat-icon">✿</span><div><strong id="total-checkins">0</strong><span>Total check-ins saved</span></div></div><div class="mini-stat"><span class="stat-icon">☼</span><div><strong id="latest-mood">Not yet</strong><span>Most recent mood</span></div></div><div class="mini-stat"><span class="stat-icon">♡</span><div><strong>One step</strong><span>At a time is enough</span></div></div></section>
+<section class="container safety-note"><strong>A gentle reminder</strong><p>This tool supports reflection and relaxation but cannot diagnose or treat a mental health condition. If you feel worse during a breathing exercise, stop and breathe normally. For ongoing distress, consider professional support.</p></section>
+</main>
+<footer class="site-footer"><div class="container footer-inner"><a class="brand" href="index.html"><span class="brand-mark">✿</span> Mindful Moments</a><p>Made with care for everyday well-being.</p><p class="footer-disclaimer">This website is educational and is not a substitute for professional mental health care.</p></div></footer>
+</body></html>
